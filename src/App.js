@@ -23,13 +23,16 @@ const App = () => {
   const likePost = postId => {
 
 const newPosts = posts.map((post)=>{
+
   if(post.id === postId){
-    return {...post, likes:post.likes+1 }
+    return {...post, likes: post.likes+1}
   }else {
     return post;
   }
-  setPosts(newPosts)
+ 
 })
+setPosts(newPosts)
+  }
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 
@@ -41,7 +44,7 @@ const newPosts = posts.map((post)=>{
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-  };
+  
 
   return (
     <div className='App'>
